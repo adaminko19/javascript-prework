@@ -1,5 +1,5 @@
 {
-    const getMoveName= function(argMoveId){
+    const getMoveName = function(argMoveId){
         if(argMoveId == 1){
         return 'kamień';
         } else if(argMoveId == 2){
@@ -11,7 +11,7 @@
         return 'nieznany ruch';
         }
     }
-    const DisplayResult =function(argComputerMove,argPlayerMove){
+    const displayResult = function(argComputerMove,argPlayerMove){
         clearMessages();
         printMessage('Komputer wybrał' + argComputerMove + ', Ty wybierasz' + argPlayerMove +'.');
         
@@ -34,7 +34,7 @@
         }
        
     }
-    const playGame= function(playerInput){
+    const playGame = function(playerInput){
 
         const randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -42,7 +42,7 @@
 
         const playerMove = getMoveName(playerInput);
 
-        DisplayResult(computerMove, playerMove)
+        displayResult(computerMove, playerMove)
  } 
  document.getElementById('play-rock').addEventListener('click', function(){
     playGame('1');
